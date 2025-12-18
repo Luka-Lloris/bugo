@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>장례 정보</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body { margin:0; background:#f6f6f6; font-family:system-ui; }
+    .wrap {
+      max-width:420px;
+      margin:0 auto;
+      background:#fff;
+      padding:40px 24px;
+      min-height:100vh;
+    }
+    h2 { margin-bottom:24px; }
+    .info { line-height:1.9; }
+    .menu a {
+      display:block;
+      margin-top:16px;
+      padding:14px;
+      border:1px solid #ddd;
+      border-radius:6px;
+      text-decoration:none;
+      color:#000;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h2>장례 정보</h2>
+
+  <div class="info">
+    <p><b>고인</b> 故 김환욱 님</p>
+    <p><b>상주</b> 子 김원형, 子 김재형, 子婦 정혜령</p>
+    <p><b>빈소</b> 동신병원 장례식장 특1호</p>
+    <p><b>발인</b> 2025년 12월 21일 10시</p>
+    <p><b>장지</b> 파주 하늘공원</p>
+  </div>
+
+  <div class="menu">
+    <a href="location.html">위치 안내</a>
+    <a href="transfer.html">이체 안내</a>
+    <a href="index.html">처음으로</a>
+  </div>
+</div>
+</body>
+</html>
