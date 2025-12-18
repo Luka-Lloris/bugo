@@ -2,124 +2,55 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>이체 안내</title>
+  <title>조문 인사</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-
-  <style>
-    body {
-      margin: 0;
-      background: #f6f6f6;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      color: #222;
-    }
-
-    .wrap {
-      max-width: 420px;
-      margin: 0 auto;
-      background: #fff;
-      min-height: 100vh;
-      padding: 40px 24px 64px;
-      box-sizing: border-box;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
-
-    .notice {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 24px;
-    }
-
-    .box {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 16px;
-      margin-bottom: 20px;
-    }
-
-    .box p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-
-    .box b {
-      display: inline-block;
-      width: 72px;
-      color: #555;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 16px;
-      padding: 14px;
-      font-size: 15px;
-      border-radius: 6px;
-      border: 1px solid #333;
-      background: #fff;
-      cursor: pointer;
-    }
-
-    button:active {
-      background: #f0f0f0;
-    }
-
-    .msg {
-      display: none;
-      margin-top: 16px;
-      font-size: 13px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .back {
-      display: block;
-      margin-top: 32px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 14px;
-      color: #000;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="wrap">
 
-    <h2>이체 안내</h2>
+    <h2 style="text-align:center;margin-bottom:24px;">조문 인사</h2>
 
-    <p class="notice">
-      부의금 관련 사기 및 오입력을 방지하기 위해<br>
-      계좌번호는 화면에 전체 표시되지 않습니다.<br>
-      복사 후, 반드시 은행 앱에서 예금주명을 확인해 주시기 바랍니다.
-    </p>
+    <!-- 상단: 조문 인사 -->
+    <div class="box"><
+      <p style="margin-bottom:16px;">
+        멀리서 마음으로 조문을 전하고자 하시는 분께서는<br>
+        아래 버튼을 통해 인사를 전해주셔도 됩니다.
+      </p>
 
+  <a href="tel:01028461177" class="btn">전화로 인사 전하기</a>
+  <a href="sms:01028461177" class="btn">문자로 인사 전하기</a>
+    </div>
+
+    <!-- 하단: 부의금 이체 -->
     <div class="box">
+      <h3 style="margin-top:0;">부의금 이체</h3>
+
+      <p style="font-size:14px;color:#555;">
+        부의금 관련 사기 및 오입력을 방지하기 위해<br>
+        계좌번호는 전체 표시되지 않습니다.
+      </p>
+
       <p><b>은행</b> KB국민은행</p>
       <p><b>계좌번호</b> 458-***-**-******</p>
       <p><b>예금주</b> 김재형</p>
 
       <button onclick="copyAccount()">계좌번호 복사</button>
 
-      <div id="msg" class="msg">
+      <p id="msg" class="msg">
         계좌번호가 복사되었습니다.<br>
-        이체 전, 은행 앱에서 표시되는<br>
-        <b>예금주명</b>을 반드시 확인해 주세요.
-      </div>
+        이체 전, 은행 앱에서 예금주명을 반드시 확인해 주세요.
+      </p>
     </div>
 
-    <a class="back" href="description.html">장례 정보로 돌아가기</a>
+    <a href="description.html" class="btn">장례 정보로 돌아가기</a>
 
   </div>
 
   <script>
     function copyAccount() {
-      // 실제 계좌번호 (화면에는 노출되지 않음)
       const accountNumber = "458-301-01-382114";
 
       if (!confirm("계좌번호를 복사하시겠습니까?\n이체 전 예금주를 반드시 확인해 주세요.")) {
@@ -129,10 +60,9 @@
       navigator.clipboard.writeText(accountNumber).then(() => {
         document.getElementById("msg").style.display = "block";
       }).catch(() => {
-        alert("계좌번호 복사에 실패했습니다.\n직접 입력해 주시기 바랍니다.");
+        alert("계좌번호 복사에 실패했습니다.\n직접 입력해 주세요.");
       });
     }
   </script>
-
 </body>
 </html>
