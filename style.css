@@ -1,87 +1,85 @@
-/* reset */
+/* ===== reset ===== */
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  background: #f6f6f6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   color: #222;
-  position: relative;
-  overflow: hidden;
 }
 
-/* ===== 배경 우하단 장식 이미지 (핵심) ===== */
-body::after {
+/* ===== 전체 배경 (모든 페이지 공통) ===== */
+.page {
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+.page::before {
   content: "";
   position: fixed;
-  right: 0;
-  bottom: 0;
-
-  width: min(60vw, 260px);
-  height: min(40vh, 260px);
-
+  inset: 0;
   background-image: url("assets/bugo01.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: center center;
   background-size: contain;
-
-  opacity: 0.35;
+  opacity: 0.6;
+  z-index: -1;
   pointer-events: none;
-  z-index: 0;
 }
 
-/* layout */
+/* ===== 카드 영역 ===== */
 .wrap {
   max-width: 420px;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 48px 24px 56px;
   background: #fff;
-  padding: 40px 24px 48px;
-  position: relative;
-  z-index: 1; /* 배경 위로 */
+  text-align: center;
 }
 
-/* index page only */
-.index-wrap {
-  min-height: 100vh;
+/* ===== 제목 ===== */
+h1 {
+  margin: 0 0 24px;
+  letter-spacing: 0.3em;
+  font-size: 26px;
+}
+
+/* ===== 설명 ===== */
+.desc {
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* ===== 중앙 리본 이미지 ===== */
+.symbol {
+  display: block;
+  width: 60%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 36px;
+  opacity: 0.85;
+}
+
+/* ===== 버튼 ===== */
+.btn-group {
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 
-/* titles */
-h1 {
-  text-align: center;
-  letter-spacing: 0.2em;
-  margin: 0 0 32px;
-}
-
-/* text */
-.desc {
-  line-height: 1.8;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* buttons */
-.btns {
-  margin-top: auto;
-}
-
-a.btn {
+.btn {
   display: block;
-  text-align: center;
   text-decoration: none;
-  color: #000;
   border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 14px;
-  font-size: 16px;
-  margin-bottom: 12px;
-  background: #fff;
+  border-radius: 8px;
+  padding: 14px 0;
+  color: #000;
+  font-size: 15px;
+}
+
+.btn:active {
+  background: #f0f0f0;
 }
