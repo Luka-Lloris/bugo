@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>위치 안내</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body { margin:0; background:#f6f6f6; font-family:system-ui; }
+    .wrap {
+      max-width:420px;
+      margin:0 auto;
+      background:#fff;
+      padding:40px 24px;
+      min-height:100vh;
+    }
+    a {
+      display:block;
+      margin-top:16px;
+      padding:14px;
+      border:1px solid #ddd;
+      border-radius:6px;
+      text-decoration:none;
+      color:#000;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h2>장례식장 위치</h2>
+
+  <p>서대문 동신병원 장례식장</p>
+
+  <a href="https://naver.me/xFLaItAT" target="_blank">
+  네이버 지도 열기
+  </a>
+
+  <a href="https://place.map.kakao.com/15450856" target="_blank">
+  카카오맵 열기
+  </a>
+
+  <a href="description.html">뒤로 가기</a>
+</div>
+</body>
+</html>
