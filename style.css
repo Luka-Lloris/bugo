@@ -100,3 +100,13 @@ button:active {
   color: #555;
   line-height: 1.6;
 }
+
+.footer-image {
+  margin-top: 48px;
+  height: 140px;
+  background-image: url("assets/bugo01.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  opacity: 0.35;
+}
