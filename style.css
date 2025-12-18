@@ -48,11 +48,15 @@ a.btn {
 /* footer image */
 .footer-image {
   margin-top: auto;
-  height: 140px;
+
+  width: 100%;
+  height: min(30vh, 180px);
+
   background-image: url("assets/bugo01.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
+
   opacity: 0.35;
 }
 
