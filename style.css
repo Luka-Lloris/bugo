@@ -110,3 +110,12 @@ button:active {
   background-size: contain;
   opacity: 0.35;
 }
+
+
+
+/* index page only */
+.index-wrap {
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 0;
+}
