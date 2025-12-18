@@ -3,12 +3,38 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #f6f6f6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 배경 우하단 장식 이미지 (핵심) ===== */
+body::after {
+  content: "";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  width: min(60vw, 260px);
+  height: min(40vh, 260px);
+
+  background-image: url("assets/bugo01.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* layout */
@@ -17,6 +43,15 @@ body {
   margin: 0 auto;
   background: #fff;
   padding: 40px 24px 48px;
+  position: relative;
+  z-index: 1; /* 배경 위로 */
+}
+
+/* index page only */
+.index-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* titles */
@@ -33,7 +68,11 @@ h1 {
   text-align: center;
 }
 
-/* button */
+/* buttons */
+.btns {
+  margin-top: auto;
+}
+
 a.btn {
   display: block;
   text-align: center;
@@ -43,27 +82,6 @@ a.btn {
   border-radius: 6px;
   padding: 14px;
   font-size: 16px;
-}
-
-/* footer image */
-.footer-image {
-  width: 100vw;
-  height: min(35vh, 220px);
-
-  background-image: url("assets/bugo01.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
-
-  opacity: 0.35;
-}
-
-/* index page only */
-.index-wrap {
-  height: 100vh;
-  padding-bottom: 0;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 12px;
+  background: #fff;
 }
